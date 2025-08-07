@@ -1,1 +1,96 @@
+:root {
+    --cor-fundo: #01080E;
+    --cor-principal: #0B0D20;
+    --cor-secundaria: #212333;
+    --cor-destaque: #2BDEFD;
+    --cor-texto: #D7F9FF;
+    --sombra-caixa: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --fonte-padrao: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-padrao);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.caixa-principal {
+    background-color: var(--cor-principal);
+    width: 90%;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--sombra-caixa);
+    text-align: center;
+}
+
+h1 {
+    color: var(--cor-destaque);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.caixa-perguntas {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 15px;
+    padding: 18px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(43, 222, 253, 0.3);
+}
+
+.caixa-resultado {
+    margin-top: 30px;
+}
+
+.texto-resultado {
+    font-style: italic;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: var(--cor-texto);
+}
+
+@media (max-width: 768px) {
+    .caixa-principal {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    button {
+        padding: 15px 20px;
+    }
+}
